@@ -1,14 +1,16 @@
 <template>
     <div id="welcome">
-
+        <Navb/>
     </div>
 </template>
 <script>
+import Navb from './Navb';
 export default {
+    components : {Navb},
     name : 'welcome',
     data : ()=>{
         return{
-            isAuth : false,
+            isAuth : true,
         }
     },
     methods : {
