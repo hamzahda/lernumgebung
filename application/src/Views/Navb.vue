@@ -3,16 +3,16 @@
     <nav>
       <ul>
         <li>
-          <router-link to="/Einfürung">Einfürung</router-link>
+          <router-link to="/Einfürung"> Einfürung </router-link>
         </li>
         <li>
-          <router-link to="/Kommentare">Kommentare</router-link>
+          <router-link to="/Kommentare"> Kommentare </router-link>
         </li>
         <li>
-          <router-link to="/Datentypen">Datentypen</router-link>
+          <router-link to="/Datentypen"> Datentypen </router-link>
         </li>
         <li>
-          <router-link to="/Operatorn">Operatorn</router-link>
+          <router-link to="/Operatorn"> Operatorn </router-link>
         </li>
       </ul>
     </nav>
