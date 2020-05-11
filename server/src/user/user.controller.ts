@@ -6,7 +6,8 @@ import { User } from './user.entity';
 export class UserController {
     constructor( private userService : UserService){}
 
-    @Get('')
+    
+    @Get()
     getUsers() : Promise<User[]>{
         return this.userService.getAllUsers();
     }
@@ -16,6 +17,11 @@ export class UserController {
         return this.userService.getAllUsers();
     }
 
+    @Get('code')
+    run() : String {
+        return ' string !' ;
+    }
+    
     
 
 

@@ -6,24 +6,16 @@ export class User{
 
     @PrimaryGeneratedColumn()
     id : Number;
-    @Column(
-        {default : ''}
-    )
-    uname : string;
-    @Column(
-        {default : ''}
-    )
-    email:string;
-    @Column(
-        {default : ''}
-    )
-    pwrd: string;
+    @Column()
+    name : string;
+    @Column()
+    pword: string;
 
 
 
     @BeforeInsert()
     async hashPassword(): Promise<void> {
-        this.pwrd = await bcrypt.hash(this.pwrd, 10);
+        this.pword = await bcrypt.hash(this.pword, 10);
       }
     
 }

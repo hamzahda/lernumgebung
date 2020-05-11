@@ -13,9 +13,9 @@ export class AuthService {
   ) {}
 
   private async validate(user: User) {
-    let selected: User = await this.userService.getUserByName(user.uname);
+    let selected: User = await this.userService.getUserByName(user.name);
     if (selected) {
-      let cmpr: boolean = await bcrypt.compare(user.pwrd, selected.pwrd);
+      let cmpr: boolean = await bcrypt.compare(user.pword, selected.pword);
       if (cmpr) return selected;
     }
     return;
@@ -24,7 +24,7 @@ export class AuthService {
   public async login(user: User): Promise<any> {
     return this.validate(user).then(userData => {
       if (userData) {
-        let payload = `${userData.uname}${userData.id}`;
+        let payload = `${userData.name}${userData.id}`;
         const accessToken = this.jwt.sign(payload);
         const user = userData;
         return {
