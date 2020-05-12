@@ -13,6 +13,7 @@ export default {
             isAuth : true,
         }
     }, 
+    
     methods : {
 
     },
