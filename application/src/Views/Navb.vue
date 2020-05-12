@@ -3,7 +3,7 @@
     <nav>
       <ul>
         <li>
-          <router-link to="/Einfürung"> Einfürung </router-link>
+         <router-link to="/Einfürung"> <div> Einfürung </div>  </router-link> 
         </li>
         <li>
           <router-link to="/Kommentare"> Kommentare </router-link>
