@@ -1,21 +1,26 @@
-## python interactive learning platform project
+# python interactive learning platform project
 
-# prerequisties : 
-Nodejs
-Mysql
+## prerequisties : 
+<ul>
+<li>Nodejs</li>
+<li>Mysql</li>
+</ul>
 
 
-# Database setup
+
+
+## Database setup
 <code> CREATE DATABASE  IF NOT EXISTS `nestdb`;
 USE `nestdb`; </code>
 
-# Server Instalaltion 
+## Server Instalaltion 
 
 ```bash
 $ npm install
 ```
-
-# Running the Server
+``` server is running on 3000
+```
+## Running the Server
 
 ```bash
 # development
@@ -30,17 +35,19 @@ $ npm run start:prod
 
 
 
-# Front application instalaltion 
+## Front application instalaltion 
 
 ```bash
 $ npm install
 ```
-# Running for development
+``` front app is running on 8181
+```
+## Running for development
 ```
 npm run serve
 ```
 
-# Running for production
+## Running for production
 ```
 npm run build
 ```
