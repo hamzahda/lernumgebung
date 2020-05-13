@@ -1,0 +1,42 @@
+version: "3.7"
+
+services:
+
+  app:
+    container_name: app
+    build:
+      context: ./application
+    depends_on:
+      - mysql_db
+    ports:
+      - "8081:8081"
+    networks:
+      - netw
+
+  server:
+    container_name: server
+    build:
+      context: ./server
+    ports:
+      - "3000:3000"
+    networks:
+      - netw
+
+  mysql_db:
+    image: mysql:8
+    networks:
+      - netw
+    environment:
+      - "MYSQL_ROOT_PASSWORD=root"
+      - "MYSQL_PASSWORD=user"
+      - "MYSQL_USER=user"
+      - "MYSQL_DATABASE=lerndb"
+      - "MYSQL_ROOT_HOST=%" 
+    volumes:
+      - "./my-db-data:/var/lib/mysql"
+      - "./mysql:/docker-entrypoint-initdb.d"
+volumes:
+  my-db:
+networks:
+  netw:
+
