@@ -6,9 +6,6 @@
 <li>Mysql</li>
 </ul>
 
-
-
-
 ## Database setup
 <code> CREATE DATABASE  IF NOT EXISTS `nestdb`;
 USE `nestdb`; </code>
