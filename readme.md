@@ -1,5 +1,15 @@
 # python interactive learning platform project
 
+the platform will be used as follows:
+<br>
+the kid registers and then login with his creds <br>
+once logged he can start going through the lessons <br>
+in each lesson there is some simple exercices that the kid has to solve <br>
+for each solved exercise the kid get points <br>
+the elgibility for the certificate depends on the points <br>
+
+
+
 ## prerequisties : 
 <ul>
 <li>Nodejs</li>
@@ -7,9 +17,10 @@
 </ul>
 
 ## Database setup
+craete the database : 
 <code> CREATE DATABASE  IF NOT EXISTS `nestdb`; <br>
- USE `nestdb`; <br>
-</code>
+ USE `nestdb`; </code>
+
 <ul>
 <li>user : user</li>
 <li>pword: user</li>
