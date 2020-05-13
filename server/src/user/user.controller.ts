@@ -1,6 +1,7 @@
-import { Controller, Get, Res, HttpStatus, Param } from '@nestjs/common';
+import { Controller, Get, Res, HttpStatus, Param, UseGuards } from '@nestjs/common';
 import { UserService } from './user.service';
 import { User } from './user.entity';
+import { AuthGuard } from '@nestjs/passport';
 
 @Controller('users')
 export class UserController {
@@ -15,11 +16,6 @@ export class UserController {
     @Get(':id')
     getUser(@Param('id') id : number) : Promise<User[]>{
         return this.userService.getAllUsers();
-    }
-
-    @Get('code')
-    run() : String {
-        return ' string !' ;
     }
     
     

@@ -1,6 +1,9 @@
 <template>
   <div id="menu">
     <nav>
+      <div class="logo">
+        
+      </div>
       <ul>
         <li>
          <router-link to="/Einfürung"> <div> Einfürung </div>  </router-link> 

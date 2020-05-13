@@ -7,6 +7,7 @@ import {secretC} from './auth.constants';
 import {UserModule} from '../user/user.module';
 import { AuthController } from './auth.controller';
 import { AuthService } from './auth.service';
+import { JwtStrategy } from './auth.strategy';
 
 @Module({
     imports: [
@@ -15,7 +16,7 @@ import { AuthService } from './auth.service';
             secretOrPrivateKey: 'secret'
         })
     ],
-    providers : [AuthService, UserService],
+    providers : [AuthService, UserService, JwtStrategy],
     controllers: [AuthController]
 })
 export class AuthModule {}

@@ -22,11 +22,7 @@ export default new Router({
       name: "login",
       component: () => import("./Views/Login.vue")
     },
-    {
-      path: "/topic",
-      name: "topic",
-      component: () => import("./Views/Topic.vue")
-    }
+    
 
   ]
 });

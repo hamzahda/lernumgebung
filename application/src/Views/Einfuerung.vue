@@ -26,8 +26,17 @@ export default {
     components:{
         Navb, 
         Interpreter
+    },
+    data: ()=>{
+        return{
+            isAuthi : true,
+        }
+    },
+    mounted(){
+       if (! this.isAuthi)
+        this.$router.push("/signup");
+    },
     }
-}
 </script>
 <style scoped>
 .topic{
