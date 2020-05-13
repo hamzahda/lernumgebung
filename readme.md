@@ -7,8 +7,10 @@
 </ul>
 
 ## Database setup
-<code> CREATE DATABASE  IF NOT EXISTS `nestdb`;
-USE `nestdb`; </code>
+<code>
+ CREATE DATABASE  IF NOT EXISTS `nestdb`;
+ USE `nestdb`; 
+</code>
 
 ## Server Instalaltion 
 
@@ -48,6 +50,6 @@ npm run serve
 ```
 npm run build
 ```
-## Using docker
+## Run the application using docker compose
 running the application using docker and docker compose 
 {not ready yet for}
