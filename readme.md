@@ -7,18 +7,20 @@
 </ul>
 
 ## Database setup
-<code>
- CREATE DATABASE  IF NOT EXISTS `nestdb`;
- USE `nestdb`; 
+<code> CREATE DATABASE  IF NOT EXISTS `nestdb`; <br>
+ USE `nestdb`; <br>
 </code>
-
+<ul>
+<li>user : user</li>
+<li>pword: user</li>
+</ul>
 ## Server Instalaltion 
 
 ```bash
 $ npm install
 ```
-``` 
-server is running on 3000
+<div> server is running on localhost:3000 </div>
+
 ```
 ## Running the Server
 
@@ -40,10 +42,9 @@ $ npm run start:prod
 ```bash
 $ npm install
 ```
-``` 
-front app is running on 8181
+<div> front app is running on localhost:8181 </div>
 
-```
+
 ## Running for development
 ```
 npm run serve
