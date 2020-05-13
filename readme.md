@@ -17,7 +17,8 @@
 ```bash
 $ npm install
 ```
-``` server is running on 3000
+``` 
+server is running on 3000
 ```
 ## Running the Server
 
@@ -39,7 +40,9 @@ $ npm run start:prod
 ```bash
 $ npm install
 ```
-``` front app is running on 8181
+``` 
+front app is running on 8181
+
 ```
 ## Running for development
 ```
