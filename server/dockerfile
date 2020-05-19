@@ -1,15 +1,10 @@
-
 FROM node:alpine
-
-# Create app directory
 WORKDIR /app
-
-# Install app dependencies
+RUN apk add python3 py3-pip
+RUN npm install --quiet node-gyp -g
 COPY package.json /app
+RUN npm config set registry http://registry.npmjs.org
 RUN npm install
-
-# Bundle app source
 COPY . /app
-
 EXPOSE 3000
 CMD [ "npm", "run", "start:prod" ]

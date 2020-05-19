@@ -1,14 +1,14 @@
 <template>
   <div id="comp">
     <div class="header">
-      <h4>Simple</h4>
+      <h4> {{prog}} </h4>
     </div>
-    <div>here is a program as a simple</div>
+    <div> {{desc}} </div>
       <div class="div">
         <textarea v-model="code"></textarea>
-        <textarea v-model="output"></textarea>
+        <textarea v-model="data.output">  </textarea>
       </div>
-      <div class="click"><button> run </button></div>
+      <div class="click" @click="send"><button> run </button></div>
   </div>
 </template>
 
@@ -18,28 +18,31 @@ import axios from 'axios';
 
 export default {
   props: {
+    desc : String,
     code: String,
+
+    output: String,
+    prog : String,
   },
   data: function(){
     return{
       data : {
         code : this.code,
-        output : '',
+        output :  '',
       }
     }
   },
   methods: {
     send: function() {
-      const data = JSON.stringify(this.data);
-      // eslint-disable-next-line no-console
-      console.log('data : ' + data );
-      axios.post( "https://pyfiddle.io/api/", {data})
-      .then(() => {
-        // eslint-disable-next-line no-console
-        console.log("resp : " );
-      });
-    },
-  },
+      const data = { 
+        data : this.code,
+      }
+      axios.post("http://localhost:3000/code", data).then((resp)=>{
+        this.data.output= resp.data.toString();
+        
+        });
+  }
+  }
 };
 </script>
 
@@ -60,8 +63,7 @@ textarea{
   padding: 1rem;
   margin: 1rem;
 }
-.result{
-}
+
 
 .click{
   text-align: center;

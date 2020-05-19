@@ -12,10 +12,5 @@ export class User{
     pword: string;
 
 
-
-    @BeforeInsert()
-    async hashPassword(): Promise<void> {
-        this.pword = await bcrypt.hash(this.pword, 10);
-      }
     
 }
