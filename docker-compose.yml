@@ -2,8 +2,8 @@ version: "3.7"
 
 services:
 
-  app:
-    container_name: app
+  client:
+    container_name: client
     build:
       context: ./application
     depends_on:
@@ -21,6 +21,8 @@ services:
       - "3000:3000"
     networks:
       - netw
+    depends_on:
+      - mysql_db
 
   mysql_db:
     image: mysql:8
