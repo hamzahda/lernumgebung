@@ -12,7 +12,5 @@ export class User{
     pword: string;
 
 
-
-
     
 }

@@ -18,9 +18,10 @@ the elgibility for the certificate depends on the points <br>
 
 ## Database setup
 craete the database : 
-<code> CREATE DATABASE  IF NOT EXISTS `nestdb`; <br>
- USE `nestdb`; </code>
 
+<code> CREATE DATABASE  IF NOT EXISTS `nestdb`; <br>
+ USE `nestdb`; <br>
+</code>
 <ul>
 <li>user : user</li>
 <li>pword: user</li>
@@ -66,5 +67,10 @@ npm run serve
 npm run build
 ```
 ## Run the application using docker compose
-running the application using docker and docker compose 
-{not ready yet for}
+
+you can also run the app with docker
+```
+cd /FOLDER
+docker-comppose up
+
+```

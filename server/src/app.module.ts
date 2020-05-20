@@ -14,7 +14,7 @@ import { AuthModule } from './auth/auth.module';
       port: 3306,
       username: 'user',
       password: 'user',
-      database: 'nestdb',
+      database: 'lerndb',
       entities: [
           'dist/**/*.entity{.ts,.js}',
       ],

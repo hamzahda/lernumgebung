@@ -9,7 +9,7 @@ export class AppController {
  
   constructor(private readonly appService: AppService) {}
 
-  @UseGuards(JwtAuthGuard)
+  //@UseGuards(JwtAuthGuard)
   @Post('/code')
   run( @Body() code : string)  {
     return  this.appService.run(code) ;
