@@ -26,14 +26,16 @@ craete the database :
 <li>user : user</li>
 <li>pword: user</li>
 </ul>
+
 ## Server Instalaltion 
 
 ```bash
+$ cd /server
 $ npm install
 ```
 <div> server is running on localhost:3000 </div>
 
-```
+
 ## Running the Server
 
 ```bash
@@ -52,6 +54,7 @@ $ npm run start:prod
 ## Front application instalaltion 
 
 ```bash
+$ cd /application
 $ npm install
 ```
 <div> front app is running on localhost:8181 </div>
@@ -70,7 +73,6 @@ npm run build
 
 you can also run the app with docker
 ```
-cd /FOLDER
 docker-comppose up
 
 ```

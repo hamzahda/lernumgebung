@@ -23,11 +23,8 @@
         picky! Little mistakes or problems in the JavaScript are called bugs.
         Even the best programmers make many, many bugs.
       </div>
-      <div>
-          <br> <br>
-          Now that we have a discussed the general topics, let's get started and start with our first programm
-      </div>
-      <Interpreter prog="Hallo Program" code="print(' Hallo ')" desc="" />
+      <h4> Let's start playing with some code </h4>
+      <Interpreter prog="Hallo Program" code="print(' Hallo ')" desc="to see what this programm does click on the run button" />
     </div>
   </div>
 </template>

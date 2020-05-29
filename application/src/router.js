@@ -15,7 +15,7 @@ export default new Router({
     {
       path: "/",
       name: "welcome",
-      component: () => import('./Views/Einfuerung.vue')
+      component: () => import('./Views/Lesson0.vue')
     },
     {
       path: "/login",

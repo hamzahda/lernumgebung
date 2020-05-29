@@ -33,12 +33,13 @@ export default {
 <style scoped>
 #menu {
   display: flex;
+
 }
 nav {
   height: 100vh;
   width: fit-content;
 
-  background-color: seashell;
+  background-color: seashell; 
 }
 #start {
   padding: 4rem;
