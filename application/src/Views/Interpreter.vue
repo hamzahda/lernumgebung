@@ -48,6 +48,9 @@ export default {
 
 <style scoped>
 #comp {
+  box-shadow: 1rem grey 1rem;
+
+
   display: flex;
   justify-content: center;
 

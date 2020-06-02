@@ -15,14 +15,18 @@ export default new Router({
     {
       path: "/",
       name: "welcome",
-      component: () => import('./Views/Lesson0.vue')
+      component: () => import('./Views/Introduction.vue')
     },
     {
       path: "/login",
       name: "login",
       component: () => import("./Views/Login.vue")
     },
-    
+    {
+      path: "/comments",
+      name: "comments",
+      component: () => import("./Views/Comments.vue")
+    },
 
   ]
 });
