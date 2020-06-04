@@ -6,18 +6,26 @@
 </template>
 
 <script>
-import Navb from "./Views/Navb";
+
+import Navb from "./Views/Navb.vue";
+
 export default {
   name: "App",
   components:{
     Navb
   }
-
 };
 </script>
 
 
 <style>
+.topic {
+  display: flex;
+  overflow-y: scroll;
+
+  height: 100vh;
+  padding: 2rem;
+}
 #app{
   display: flex;
 }
@@ -25,12 +33,6 @@ export default {
   flex: 1;
   background-color: #F8F8FF   ;
 }
-code{
-  font-size: 1rem;
-  color: seagreen;
-  }
-
-
 
 h1{
   color:grey  ;
@@ -42,15 +44,13 @@ h2{
 .hinweis{
   padding: 1rem;
 }
-.teil{
-    font-family: Helvetica;
+.text {
+  font-family: Helvetica;
   color: #303030;
   font-size: 1rem;
   font-weight: 300;
   letter-spacing: 1px;
 }
-
-
 
 
 

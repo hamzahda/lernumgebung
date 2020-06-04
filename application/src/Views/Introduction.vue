@@ -44,22 +44,4 @@ export default {
 };
 </script>
 <style scoped>
-.topic {
-  display: flex;
-}
-.content {
-  margin: 2rem;
-  padding: 2rem;
-}
-
-.text {
-  font-family: Helvetica;
-  color: #303030;
-  font-size: 1rem;
-  font-weight: 300;
-  letter-spacing: 1px;
-}
-code {
-  font-size: 1rem;
-}
 </style>

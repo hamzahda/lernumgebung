@@ -8,17 +8,32 @@ in each lesson there is some simple exercices that the kid has to solve <br>
 for each solved exercise the kid get points <br>
 the elgibility for the certificate depends on the points <br>
 
+## Server
+<div>GET /users to get all the users </div>
+<div>POST /users create user  </div>
+
+<div> POST /users/:id change users details </div>
+<div>POST  /code to send code to the interpreter</div>
+
+## App
+<div>/signup</div>
+<div>/login</div>
 
 
-## prerequisties : 
+
+
+
+
+
+
+
+## setup without docker: 
 <ul>
 <li>Nodejs</li>
 <li>Mysql</li>
 </ul>
 
-## Database setup
-craete the database : 
-
+Database setup
 <code> CREATE DATABASE  IF NOT EXISTS `nestdb`; <br>
  USE `nestdb`; <br>
 </code>
@@ -27,7 +42,7 @@ craete the database :
 <li>pword: user</li>
 </ul>
 
-## Server Instalaltion 
+#### Server Instalaltion 
 
 ```bash
 $ cd /server
@@ -51,28 +66,30 @@ $ npm run start:prod
 
 
 
-## Front application instalaltion 
+#### Front application instalaltion 
 
 ```bash
 $ cd /application
 $ npm install
 ```
-<div> front app is running on localhost:8181 </div>
+<div> front app is running on localhost:8080 </div>
+
+```bash
+# development
+$ npm run serve
+
+# production mode
+$ npm run build
+```
 
 
-## Running for development
-```
-npm run serve
-```
-
-## Running for production
-```
-npm run build
-```
 ## Run the application using docker compose
 
-you can also run the app with docker
+<div> front app is running on localhost:8080 </div>
+<div> server is running on localhost:3000 </div>
+
 ```
+cd /[project folder]
 docker-comppose up
 
 ```

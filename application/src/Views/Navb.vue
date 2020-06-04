@@ -1,21 +1,19 @@
 <template>
   <div id="menu">
     <nav>
-      <div class="logo">
-        
-      </div>
       <ul>
+        <div class="logo">Python Lernen</div>
         <li>
-         <router-link to="/Einfürung">  Einfürung   </router-link> 
+          <router-link to="/">Einfürung</router-link>
         </li>
         <li>
-          <router-link to="/Kommentare"> Kommentare </router-link>
+          <router-link to="/comments">Kommentare</router-link>
         </li>
         <li>
-          <router-link to="/Datentypen"> Datentypen </router-link>
+          <router-link to="/vars">Datentypen</router-link>
         </li>
         <li>
-          <router-link to="/Operatorn"> Operatorn </router-link>
+          <router-link to="/Operatorn">Operatorn</router-link>
         </li>
       </ul>
     </nav>
@@ -23,23 +21,19 @@
 </template>
 
 <script>
-export default {
-  methods: {
-    send: function() {}
-  }
-};
+export default {};
 </script>
 
 <style scoped>
 #menu {
   display: flex;
-
 }
+
 nav {
   height: 100vh;
   width: fit-content;
 
-  background-color: seashell; 
+  background-color: seashell;
 }
 #start {
   padding: 4rem;
@@ -52,5 +46,9 @@ ul {
 }
 li {
   padding: 1rem;
+}
+.logo {
+  display: flex;
+  font-size: 1.5rem;
 }
 </style>

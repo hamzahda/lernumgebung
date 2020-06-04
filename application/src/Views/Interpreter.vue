@@ -48,7 +48,6 @@ export default {
 
 <style scoped>
 #comp {
-  box-shadow: 1rem grey 1rem;
 
 
   display: flex;
@@ -59,6 +58,8 @@ export default {
   padding:1rem;
   margin: 1rem;
 }
+
+
 textarea{
   width: 45%;
   height: 100%;
