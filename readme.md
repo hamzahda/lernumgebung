@@ -98,10 +98,8 @@ $ npm run build
 
 
 ## Using Docker
-
 <div> front app is running on localhost:8080 </div>
 <div> server is running on localhost:3000 </div>
-
 ```
 cd /[project folder]
 docker-comppose up
