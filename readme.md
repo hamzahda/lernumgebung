@@ -1,5 +1,15 @@
 # python interactive learning platform project
 
+
+
+
+**Table Of Contents**
+- [Project description](#project-description)
+- [Installation](#installation)
+- [Usage](#example-usage)
+- [License](#license)
+
+## Project description:
 the platform will be used as follows:
 <br>
 the kid registers and then login with his creds <br>
@@ -8,30 +18,34 @@ in each lesson there is some simple exercices that the kid has to solve <br>
 for each solved exercise the kid get points <br>
 the elgibility for the certificate depends on the points <br>
 
-## Server
-<div>GET /users to get all the users </div>
-<div>POST /users create user  </div>
 
-<div> POST /users/:id change users details </div>
-<div>POST  /code to send code to the interpreter</div>
+*Techs:*
+* nodejs
+* expressjs
 
-## App
-<div>/signup</div>
-<div>/login</div>
-
-
-
-
+* nestjs
+* typeorm
+* vuejs
+* vuex
+* vue bootsrap
+* mysql
+* swagger
 
 
 
 
 
-## setup without docker: 
-<ul>
-<li>Nodejs</li>
-<li>Mysql</li>
-</ul>
+
+
+
+
+
+## Functional and Non Functional Requirements
+
+
+## System Design
+
+**Usage W/o Docker**
 
 Database setup
 <code> CREATE DATABASE  IF NOT EXISTS `nestdb`; <br>
@@ -42,16 +56,16 @@ Database setup
 <li>pword: user</li>
 </ul>
 
-#### Server Instalaltion 
 
+In this setup you'll need to open two <br>
+Download or clone the project then 
+run the following cmds in the first to install the server <br>
 ```bash
 $ cd /server
 $ npm install
 ```
-<div> server is running on localhost:3000 </div>
+the flollowing scripts are available for the server:
 
-
-## Running the Server
 
 ```bash
 # development
@@ -63,27 +77,27 @@ $ npm run start:dev
 # production mode
 $ npm run start:prod
 ```
+<div> server is running on localhost:3000 </div>
 
 
-
-#### Front application instalaltion 
+and the following in the second to install the front application
 
 ```bash
 $ cd /application
 $ npm install
 ```
-<div> front app is running on localhost:8080 </div>
 
+<div> front app is running on localhost:8080 </div>
+the flollowing scripts are available for the server:
 ```bash
 # development
 $ npm run serve
-
 # production mode
 $ npm run build
 ```
 
 
-## Run the application using docker compose
+## Using Docker
 
 <div> front app is running on localhost:8080 </div>
 <div> server is running on localhost:3000 </div>

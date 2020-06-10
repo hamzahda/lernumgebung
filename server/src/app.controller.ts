@@ -11,7 +11,7 @@ export class AppController {
 
   //@UseGuards(JwtAuthGuard)
   @Post('/code')
-  run( @Body() code : string)  {
+  run( @Body() code)  {
     return  this.appService.run(code) ;
   }
   

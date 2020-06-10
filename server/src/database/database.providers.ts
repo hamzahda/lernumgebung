@@ -6,11 +6,11 @@ export const databaseProviders = [
     provide: 'DATABASE_CONNECTION',
     useFactory: async () => await createConnection({
       type: 'mysql',
-      host: 'mysql_db',
+      host: 'localhost',
       port: 3306,
-      username: 'user',
-      password: 'user',
-      database: 'lerndb',
+      username: 'root',
+      password: 'root',
+      database: 'nestdb',
       entities: [
           'dist/**/*.entity{.ts,.js}',
       ],

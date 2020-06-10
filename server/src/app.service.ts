@@ -9,21 +9,17 @@ const { sleep } = require('sleepjs');
 export class AppService {
   async run(code) {
     let data;
-    if(code.type === "inline"){
-      PythonShell.runString(code.data, null, (err, output) => {
-        data = output;
-        console.log('data : ' + data);
-      });
-      await sleep(1000);
-    }
-    if(code.type === "script"){
-      fs.writeFile('script.py', code.data, function (err) {
+      fs.writeFile('script.py', code.code, function (err) {
         if (err) return console.log(err);
       });
       PythonShell.run('script.py', null, function (err, results) {
+        console.log('results  : ' + results);
         data = results;
       });
-    }
-    return data;
+      await sleep(1000);
+      console.log('data : ' + data);
+    return {
+    result :  data
+    };
   }
 }

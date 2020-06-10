@@ -44,4 +44,9 @@ export default {
 };
 </script>
 <style scoped>
+
+.top{
+  display: flex;
+  justify-content: space-evenly;
+}
 </style>

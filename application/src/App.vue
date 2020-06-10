@@ -1,18 +1,21 @@
 <template>
-<div id="app">
-  <Navb/>
-  <router-view/>
-</div>
+  <div id="app">
+    <Header />
+    <div class="flex">
+      <Navb />
+      <router-view />
+    </div>
+  </div>
 </template>
 
 <script>
-
 import Navb from "./Views/Navb.vue";
-
+import Header from "./Views/Header";
 export default {
   name: "App",
-  components:{
-    Navb
+  components: {
+    Navb,
+    Header
   }
 };
 </script>
@@ -21,27 +24,27 @@ export default {
 <style>
 .topic {
   display: flex;
-  overflow-y: scroll;
+  overflow-y: hidden;
 
-  height: 100vh;
+  height: 100%;
   padding: 2rem;
 }
-#app{
+.flex {
   display: flex;
 }
-.topic{
+.topic {
   flex: 1;
-  background-color: #F8F8FF   ;
+  background-color: #f8f8ff;
 }
 
-h1{
-  color:grey  ;
+h1 {
+  color: grey;
 }
-h2{
+h2 {
   font-size: 1.5rem;
   color: seagreen;
 }
-.hinweis{
+.hinweis {
   padding: 1rem;
 }
 .text {
@@ -51,8 +54,4 @@ h2{
   font-weight: 300;
   letter-spacing: 1px;
 }
-
-
-
-
 </style>

@@ -2,7 +2,6 @@
   <div id="menu">
     <nav>
       <ul>
-        <div class="logo">Python Lernen</div>
         <li>
           <router-link to="/">Einfürung</router-link>
         </li>
@@ -30,7 +29,7 @@ export default {};
 }
 
 nav {
-  height: 100vh;
+  height: 100%;
   width: fit-content;
 
   background-color: seashell;

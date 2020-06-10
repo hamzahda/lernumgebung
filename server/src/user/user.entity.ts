@@ -10,7 +10,15 @@ export class User{
     name : string;
     @Column()
     pword: string;
+    @Column()
+    ponits : points;
+    @Column()
+    complete : boolean;
+
+}
 
 
-    
+interface points{
+    lesson : number,
+    points : number,
 }
