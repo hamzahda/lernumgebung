@@ -1,5 +1,5 @@
 # python interactive learning platform project
-
+this project is for the KinderCampus where we teach the kids different programming principles and languages.
 
 
 
@@ -32,14 +32,6 @@ the elgibility for the certificate depends on the points <br>
 * swagger
 
 
-
-
-
-
-
-
-
-
 ## Functional and Non Functional Requirements
 
 
@@ -48,8 +40,9 @@ the elgibility for the certificate depends on the points <br>
 **Usage W/o Docker**
 
 Database setup
-<code> CREATE DATABASE  IF NOT EXISTS `nestdb`; <br>
- USE `nestdb`; <br>
+`CREATE DATABASE  IF NOT EXISTS `nestdb`; `
+
+ `USE `nestdb`; `
 </code>
 <ul>
 <li>user : user</li>
@@ -61,7 +54,7 @@ In this setup you'll need to open two <br>
 Download or clone the project then 
 run the following cmds in the first to install the server <br>
 ```bash
-$ cd /server
+$ cd lernumgebung/server
 $ npm install
 ```
 the flollowing scripts are available for the server:
@@ -83,12 +76,13 @@ $ npm run start:prod
 and the following in the second to install the front application
 
 ```bash
-$ cd /application
+$ cd lernumgebung/application
 $ npm install
 ```
 
 <div> front app is running on localhost:8080 </div>
 the flollowing scripts are available for the server:
+
 ```bash
 # development
 $ npm run serve
@@ -100,8 +94,8 @@ $ npm run build
 ## Using Docker
 <div> front app is running on localhost:8080 </div>
 <div> server is running on localhost:3000 </div>
-```
-cd /[project folder]
-docker-comppose up
 
+```shell
+cd /lernumgebung
+docker-comppose up
 ```
