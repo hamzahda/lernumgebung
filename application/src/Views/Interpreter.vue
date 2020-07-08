@@ -35,11 +35,10 @@ export default {
   methods: {
     send: function() {
       const data = { 
-        data : this.code,
+        code : this.code,
       }
       axios.post("http://localhost:3000/code", data).then((resp)=>{
-        this.data.output= resp.data.toString();
-        
+        this.data.output= resp.data.result;
         });
   }
   }

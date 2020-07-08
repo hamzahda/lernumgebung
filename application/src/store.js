@@ -9,6 +9,7 @@ export default new Vuex.Store({
     status: "",
     accessToken: localStorage.getItem("accessToken") || "",
     user: {},
+    name:""
   },
   mutations: {
     auth_request(state) {
@@ -17,10 +18,12 @@ export default new Vuex.Store({
     auth_error(state) {
       state.status = "error";
     },
-    auth_success(state, accessToken, user) {
+    auth_success(state, accessToken, user, name) {
       state.status = "success";
       state.accessToken = accessToken;
       state.user = user;
+      state.name = name;
+      
     },
     logout(state) {
       state.status = "";
@@ -62,7 +65,7 @@ export default new Vuex.Store({
             const user = resp.data.user;
             localStorage.setItem("accessToken", accessToken);
             axios.defaults.headers.common["Authorization"] = accessToken;
-            commit("auth_success", accessToken, user);
+            commit("auth_success", accessToken, user, resp.data.user.name);
             resolve(resp);
           })
           .catch((err) => {
@@ -84,9 +87,11 @@ export default new Vuex.Store({
       });
     },
     logout({ commit }) {
+      console.log('test')
       return new Promise((resolve) => {
         commit("logout");
         localStorage.removeItem("accessToken");
+        localStorage.removeItem("name");
         delete axios.defaults.headers.common["Authorization"];
         resolve();
       });

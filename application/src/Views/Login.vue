@@ -1,10 +1,10 @@
 <template>
   <div id="login">
     <div id="form">
-      <h2>Sign In</h2>
-      <b-form-input class="form" v-model="name" placeholder="Enter your name"></b-form-input>
-      <b-form-input class="form" v-model="powrd" placeholder="Enter your pword"></b-form-input>
-      <button type="submit">login</button>
+      <h2>Sign In</h2> <div>Not registered yet?  <a href="/signup">Register</a></div>
+      <b-form-input class="form" v-model="user.name" placeholder="Enter your name"></b-form-input>
+      <b-form-input class="form" v-model="user.pword" placeholder="Enter your pword"></b-form-input>
+      <button type="submit" @click="login">login</button>
     </div>
   </div>
 </template>
@@ -21,10 +21,9 @@ export default {
     };
   },
   methods: {
-    login: () => {
-      this.$store.dispatch("login", user);
-      if(this.$store.getters.status == "sucess")
-        this.$router.push("/introduction");
+    login: function(){
+      this.$store.dispatch("login", this.user);
+      this.$router.push("/");
     }
   }
 };

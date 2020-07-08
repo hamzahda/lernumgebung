@@ -29,11 +29,12 @@ export class AuthService {
     return this.validate(user).then(userData => {
       console.log('load:'+  userData);
       if (userData) {
+        console.log(userData);
         let payload = `${userData.name}${userData.id}`;
         const accessToken = this.jwt.sign(payload);
         const user = userData;
         return {
-          user: userData,
+          user: user,
           accessToken: accessToken,
         };
       }

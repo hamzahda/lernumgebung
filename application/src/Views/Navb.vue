@@ -6,13 +6,25 @@
           <router-link to="/">Einfürung</router-link>
         </li>
         <li>
+          <router-link to="/gabe">Ein und Ausgabe</router-link>
+        </li>
+        <li>
           <router-link to="/comments">Kommentare</router-link>
         </li>
         <li>
           <router-link to="/vars">Datentypen</router-link>
         </li>
         <li>
-          <router-link to="/Operatorn">Operatorn</router-link>
+          <router-link to="/oprators">Operatorn</router-link>
+        </li>
+        <li>
+          <router-link to="/ifelse">Fluss Kontroll</router-link>
+        </li>
+                <li>
+          <router-link to="/for">For Schleife</router-link>
+        </li>
+                <li>
+          <router-link to="/oprators">While Schleife</router-link>
         </li>
       </ul>
     </nav>

@@ -30,8 +30,8 @@ export default {
     return {
       user: {
         name: "",
-        pword: "",
-      },
+        pword: "",      
+        },
       rPword: "",
       notif : false
     };
@@ -42,6 +42,7 @@ export default {
         this.$store.dispatch("signup", info);
         this.$router.push("/login");
     },
+    
   }
 };
 </script>

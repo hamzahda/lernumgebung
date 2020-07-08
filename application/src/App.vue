@@ -2,7 +2,7 @@
   <div id="app">
     <Header />
     <div class="flex">
-      <Navb />
+      <Navb v-if="this.getRoutePath"/>
       <router-view />
     </div>
   </div>
@@ -16,6 +16,15 @@ export default {
   components: {
     Navb,
     Header
+  },
+    computed: {
+    getRoutePath() {
+      if (this.$route.path != "/login") {
+        if (this.$route.path != "/signup") {
+          return true;
+        }
+      }
+    }
   }
 };
 </script>
@@ -53,5 +62,26 @@ h2 {
   font-size: 1rem;
   font-weight: 300;
   letter-spacing: 1px;
+}
+code{
+  margin:2rem ;
+}
+pre{
+  background-color:whitesmoke ;
+  padding: 0.5rem;
+  width: 49vw;
+}
+.string{
+  color: orange;
+}
+.code{
+  color: blue;
+}
+.comment{
+  color:  thistle;
+}
+
+.content{
+  
 }
 </style>

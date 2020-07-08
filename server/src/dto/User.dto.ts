@@ -1,5 +1,11 @@
-export class UserDTO{
-id: Number;
-uname: string;
-email: string;
+class UserDTO {
+  id: Number;
+  name: string;
+  pword: string;
+  scores:[]
+  score: number
 }
+
+
+
+export default UserDTO;

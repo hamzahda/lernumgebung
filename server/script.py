@@ -1,3 +1,2 @@
-if 0 == 0: 
-  print('test')
-print('test')
+for i in range(0 , 8):
+      print('Hallo',i)

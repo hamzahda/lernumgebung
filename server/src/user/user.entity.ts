@@ -10,15 +10,9 @@ export class User{
     name : string;
     @Column()
     pword: string;
+    @Column("simple-array")
+    scores: number[];
     @Column()
-    ponits : points;
-    @Column()
-    complete : boolean;
+    score: number;
 
-}
-
-
-interface points{
-    lesson : number,
-    points : number,
 }
