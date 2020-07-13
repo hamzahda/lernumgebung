@@ -18,11 +18,11 @@ export default new Vuex.Store({
     auth_error(state) {
       state.status = "error";
     },
-    auth_success(state, accessToken, user, name) {
+    auth_success(state, data) {
       state.status = "success";
-      state.accessToken = accessToken;
-      state.user = user;
-      state.name = name;
+      state.accessToken = data.accessToken;
+      
+      state.user = data.user;
       
     },
     logout(state) {
@@ -30,6 +30,24 @@ export default new Vuex.Store({
       state.accessToken = "";
     },
   },
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -63,9 +81,13 @@ export default new Vuex.Store({
           .then((resp) => {
             const accessToken = resp.data.accessToken;
             const user = resp.data.user;
+            console.log("user  "+ JSON.stringify(user));
             localStorage.setItem("accessToken", accessToken);
             axios.defaults.headers.common["Authorization"] = accessToken;
-            commit("auth_success", accessToken, user, resp.data.user.name);
+            commit("auth_success",{
+              accessToken: accessToken,
+              user: user              
+            });
             resolve(resp);
           })
           .catch((err) => {

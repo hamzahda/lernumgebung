@@ -2,7 +2,7 @@
   <div id="app">
     <Header />
     <div class="flex">
-      <Navb v-if="this.getRoutePath"/>
+      <Navb v-if="this.getRoutePath" />
       <router-view />
     </div>
   </div>
@@ -17,7 +17,7 @@ export default {
     Navb,
     Header
   },
-    computed: {
+  computed: {
     getRoutePath() {
       if (this.$route.path != "/login") {
         if (this.$route.path != "/signup") {
@@ -25,6 +25,17 @@ export default {
         }
       }
     }
+  },
+  data: () => {
+    return {
+      isAuth: false
+    };
+  },
+  methods: {},
+  created(){
+      console.log("logg"  +  this.$store.getters.isLoggedIn);
+
+      !this.$store.getters.isLoggedIn ? this.$route.push("/login") : {};
   }
 };
 </script>
@@ -63,25 +74,24 @@ h2 {
   font-weight: 300;
   letter-spacing: 1px;
 }
-code{
-  margin:2rem ;
+code {
+  margin: 2rem;
 }
-pre{
-  background-color:whitesmoke ;
+pre {
+  background-color: whitesmoke;
   padding: 0.5rem;
   width: 49vw;
 }
-.string{
+.string {
   color: orange;
 }
-.code{
+.code {
   color: blue;
 }
-.comment{
-  color:  thistle;
+.comment {
+  color: thistle;
 }
 
-.content{
-  
+.content {
 }
 </style>
