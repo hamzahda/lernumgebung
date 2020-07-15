@@ -2,14 +2,11 @@
   <div class="topic">
     <div class="content">
       <h1 id="comments">Kommentare</h1>
-      <br />
       <h2>Was sind denn Kommentare ?</h2>
-      <br />
       <div
         class="text"
       >Ein Kommentar ist einfach ein Code, der vom Interpreter nicht ausgeführt wird. Kommentare werden verwendet, um andere Programmierer zu erklären bzw. 
       dokumentieren und ihnen zu helfen, zu verstehen, was sie tun, ohne den gesamten Code lesen zu müssen.</div>
-
       <h2>Arten von Kommentaren</h2>
       <br />
       <div class="text">
