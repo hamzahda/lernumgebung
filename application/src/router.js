@@ -44,29 +44,31 @@ export default new Router({
       path: "/",
       name: "welcome",
       component: Welcome,
+      beforeEnter: ifNotAuthenticated
     },
     {
       path: "/login",
       name: "login",
       component: Login,
+      beforeEnter: ifAuthenticated
 
     },
     {
-      path: "/vars",
+      path: "/Datentypen",
       name: "vars",
       component: Vars,
       beforeEnter: ifNotAuthenticated
 
     },
     {
-      path: "/comments",
+      path: "/Kommentare",
       name: "comments",
       component: Comments,
       beforeEnter: ifNotAuthenticated
 
     },
     {
-      path: "/oprators",
+      path: "/Operatoren",
       name: "oprators",
       component: Oprators,
       beforeEnter: ifNotAuthenticated
@@ -80,14 +82,14 @@ export default new Router({
 
     },
     {
-      path: "/for",
+      path: "/Schleifen",
       name: "for",
       component: For,
       beforeEnter: ifNotAuthenticated
 
     },
     {
-      path: "/gabe",
+      path: "/Ausgabe",
       name: "gabe",
       component: Eingabe,
       beforeEnter: ifNotAuthenticated

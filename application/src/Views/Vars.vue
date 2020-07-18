@@ -16,7 +16,7 @@
           <br />
           <code>
             <pre>
-              name = "wert" # name = wert
+              str = "wert" <span class="comment">#in str variable steht jetzt wert als zeichekette</span>
             </pre>
           </code>
           <h4>Regeln für Variablennamen</h4><br>
@@ -27,7 +27,8 @@
           Bei Variablennamen wird zwischen Groß- und Kleinschreibung unterschieden (Alter, Alter und Alter sind drei verschiedene Variablen).<br>
           <Interpreter
             desc="In diesem interaktiven Beispiel können Sie sehen, dass wir den Wert der Variable auf 0,1 gesetzt haben und dann den Wert der zu prüfenden Variable ausgedruckt haben, und tatsächlich war er 0,1"
-            code="vars= 0.1; print(vars)"
+            code="vars= 0.1
+print(vars)"
           />
         </div>
         <h2>Datentypen</h2>
@@ -41,9 +42,10 @@
         Schweben: Jede reelle Zahl mit einer Fließkommadarstellung, bei der eine gebrochene Komponente durch ein Dezimalzeichen oder eine wissenschaftliche Notation bezeichnet wird
         <Interpreter
           desc="in diesem Beispiel können Sie sehen, wie der Python-Interpeter jeder Variablen einen Datentyp zuweist, entsprechend der ihr zugewiesenen Variablen. um den Datentyp zu sehen, können wir die type-Funktion mit der Druckfunktion verwenden"
-          code="variable int= 1; print(type(variable int));
-variable int= 1; print(type(variable int));
-variable int= 1; print(type(variable int));"
+          code="var=0.0
+print(type(var))
+var= 0
+print(type(var))"
         />
         <br />
         <h4>sequenz</h4><br>
@@ -55,11 +57,14 @@ variable int= 1; print(type(variable int));"
           der Deklaration eines einzelnen Zeichens. Doppelte Anführungszeichen werden bei der Deklaration einer Zeile und dreifache Anführungszeichen bei der Deklaration eines 
           Absatzes/mehrerer Zeilen verwendet.<br><br>
           *  Liste : Ein Listobjekt ist eine geordnete Sammlung von einem oder mehreren Datenelementen, die nicht unbedingt vom gleichen Typ sind und in eckige Klammern gesetzt werden.
-          <Interpreter desc="dasselbe für dieses Beispiel" code="vars= 0.1; print(vars)" />
+          <Interpreter desc="dasselbe für dieses Beispiel" code="vars= ['erste','zweite']
+print(type(vars))
+"/>
         </div>
 
         <h4>Boolesches</h4>Daten mit einem von zwei eingebauten Werten True oder False. Beachten Sie, dass 'T' und 'F' groß geschrieben werden. true und false sind keine gültigen Booleans und Python wird für sie einen Fehler ausgeben.
-        <Interpreter desc="dasselbe für dieses Beispiel" code="vars= 0.1; print(vars)" />
+        <Interpreter desc="dasselbe für dieses Beispiel" code="play= True
+print(type(play))" />
       </div>
       <div>
         <Form lektion="2" />

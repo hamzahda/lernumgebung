@@ -10,7 +10,7 @@
       <br />
       <h2>Was ist eigentlich eine Programmier Sprache ?</h2>
       <div class="text">
-        Da Computer kein Englisch verstehen, müssen Sie ihnen Anweisungen in speziellen Computersprachen geben, damit Computer diese Sprachen verstehen können. Diese werden als Programmiersprachen bezeichnet.
+        Da Computer kein Englisch oder Deutsch verstehen, müssen Sie ihnen Anweisungen in speziellen Computersprachen geben, damit Computer diese Sprachen verstehen können. Diese werden als Programmiersprachen bezeichnet.
         Eine Programmiersprache ist eine Art geschriebene Sprache, die Computern sagt, was zu tun ist, um zu arbeiten. Eine Programmiersprache ist wie eine Reihe von Anweisungen, denen der Computer folgt, um etwas zu tun.
         <br />
       </div>
@@ -29,12 +29,11 @@
         im Code werden als Fehler bezeichnet. Selbst die besten Programmierer machen viele, viele Fehler.
       </div>
       <br><br>
-      Das Erstellen eines einfachen Programms, in dem Text angezeigt wird, ist häufig das erste, was ein Programmierer tut, nachdem er seine Umgebung zum ersten Mal e
-      ingerichtet hat. Dies dauert nur wenige Sekunden und kann dem Programmierer bestätigen, dass die Umgebung eingerichtet ist und funktioniert. "Hallo Welt" scheint das häufigste Wort beim Schreiben dieser Programme zu sein. Ich werde hier an dieser Tradition festhalten, aber Sie können gerne alles schreiben, was Sie möchten!
+      Das Erstellen eines einfachen Programms, in dem Text angezeigt wird, ist häufig das erste, was ein Programmierer tut, nachdem er seine Umgebung erstellt hat.
+      aber bei diesem Titrial brauchen Sie sich darüber keine Sorgen zu machen, weil Sie die eingebettete interaktive Konsole einfach benutzen können ."Hallo Welt" scheint das häufigste Wort beim Schreiben dieser Programme zu sein. Ich werde hier an dieser Tradition festhalten, aber Sie können gerne alles schreiben, was Sie möchten!
       Wie auch immer, Sie können ein einfaches "Hallo Welt" -Programm erstellen, indem Sie die print () - Funktion von Python verwenden, um den Text "Hallo Welt" auf dem Bildschirm auszugeben.
       Wir haben dies bereits zuvor getan, aber dieses Mal speichern wir das Programm, damit wir es später ausführen können.
-      <Interpreter prog="Hallo Program" code="print(' Hallo ')" />
-      {{this.$store.getters.state}}
+      <Interpreter prog="Ihr erstes Programm" code="print('  Hallo Welt  ')" desc="klicken Sie einfach auf run" />
     </div>
   </div>
 </template>

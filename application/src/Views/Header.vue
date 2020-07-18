@@ -1,7 +1,7 @@
 <template>
   <nav>
-    <b-navbar toggleable="lg" type="dark" variant="info" fixed  >
-      <b-navbar-brand href="#">{ KC } Python Lernen</b-navbar-brand>
+    <b-navbar toggleable="lg" type="dark" variant="info" fixed>
+      <b-navbar-brand href="/">{ KC } Python Lernen</b-navbar-brand>
       <b-navbar-toggle target="nav-collapse"></b-navbar-toggle>
       <b-collapse id="nav-collapse" is-nav>
         <b-navbar-nav class="ml-auto">
@@ -15,9 +15,14 @@
         </b-navbar-nav>
       </b-collapse>
       <b-modal id="bv-modal-example" v-model="this.user" hide-footer>
-        <template v-slot:modal-title>Hallo, {{user.name}} </template>
+        <template v-slot:modal-title>Hallo, {{user.name}}</template>
         <div class="d-block text-center">
-          Ihre Score ist  {{user.score}}
+          Ihre Score ist {{user.score}}
+
+          
+          Zertifikat:
+          <div v-if="user.score > 11">Ja !</div>
+          <div v-if="user.score < 11">nicht ausreichend !</div>
         </div>
         <b-button class="mt-3" block @click="$bvModal.hide('bv-modal-example')">Close</b-button>
       </b-modal>
@@ -33,8 +38,7 @@ export default {
     }
   },
   data: () => {
-    return {
-    };
+    return {};
   },
   computed: {
     getRoutePath() {
@@ -46,8 +50,12 @@ export default {
     },
 
     user() {
-      return JSON.parse(localStorage.getItem("user"));
-    },
+      var user = JSON.parse(localStorage.getItem("user"))
+        if (user == undefined) {
+          return {};
+        }
+      return user;
+    }
   }
 };
 </script>

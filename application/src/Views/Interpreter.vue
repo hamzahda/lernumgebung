@@ -39,7 +39,7 @@ export default {
         code: this.code
       };
       axios.post("http://localhost:3000/code", data).then(resp => {
-        this.data.output = resp.data.result;
+        resp.data.result != undefined?  this.data.output = resp.data.result : this.data.output = 'Fehler !';
       });
     }
   }

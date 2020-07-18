@@ -59,6 +59,7 @@ export default {
       console.log(data.lektion);
       axios.post("http://localhost:3000/users/score",data).then(s => {
         console.log(s);
+        alert('Ihre Antworte sind erfolgreich geschickt')
         axios.get("http://localhost:3000/users/"+user.id).then(s =>{
         console.log("the user  :  ",s.data.scores);
         this.$store.dispatch("set", s.data)

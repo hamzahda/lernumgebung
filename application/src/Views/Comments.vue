@@ -31,6 +31,8 @@
         </pre>
       </code>
       <br />
+            <Interpreter prog="einzeilige" code="print('Hallo') #Kommentare testen" />
+
       <h2>Kommentare mit mehreren Zeilen</h2>
       <br />
       <div class="text">
@@ -45,8 +47,10 @@
         <span class>print</span>(<span class>I am out of Multiple line comment</span>)
         '''</span></pre>
       </code>
-
-      <Interpreter prog="Hallo Program" code="print('Hallo') #Kommentare testen" />
+      <Interpreter prog="mehrzeilige" code="print('Hallo')
+''' das ist eine mehrzeilige code
+      und es wird nicht von der Interpreter betrachtet
+'''" />
       <Form lektion="1" />
     </div>
   </div>

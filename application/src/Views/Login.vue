@@ -1,9 +1,19 @@
 <template>
   <div id="login">
     <div id="form">
-      <h2>Einloggen</h2> <div>Noch nicht angemeldet?  <a href="/signup">Anmelden</a></div>
-      <b-form-input class="form" v-model="user.name" placeholder="Ihre name"></b-form-input>
-      <b-form-input class="form" v-model="user.pword" placeholder="Ihre pword"></b-form-input>
+      <h2>Einloggen</h2>
+      <div>
+        Noch nicht angemeldet?
+        <a href="/signup">Anmelden</a>
+      </div>
+      <b-form-input class="form" v-model="user.name" placeholder="Ihre voll Name" required></b-form-input>
+      <b-form-input
+        type="password"
+        class="form"
+        v-model="user.pword"
+        placeholder="Ihr Pwort"
+        required
+      ></b-form-input>
       <button type="submit" @click="login">login</button>
     </div>
   </div>
@@ -21,9 +31,9 @@ export default {
     };
   },
   methods: {
-    login: function(){
-      this.$store.dispatch("login", this.user)
-      this.$router.push("/");
+    login: async function() {
+      await this.$store.dispatch("login", this.user)
+      this.$router.push("/")
     }
   }
 };

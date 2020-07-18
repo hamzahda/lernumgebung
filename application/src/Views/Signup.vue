@@ -1,24 +1,29 @@
 <template>
   <div id="login">
-    <form id="form" @submit.prevent="register">
-      <div id="notif" v-if="notif"> check powrds </div>
+    <form validate id="form" @submit.prevent="check">
+      <div id="notif" v-if="notif"> Pworte sind nicht gleich </div>
       <h2>Anmelden</h2>
       <b-form-input
         class="form"
         v-model="user.name"
-        placeholder="Ihre Name"
+        placeholder="Ihre voll Name"
+        required
       ></b-form-input>
       <b-form-input
         class="form"
         v-model="user.pword"
-        placeholder="Ihre pwort"
+        placeholder="Ihr Pwort"
+        type="password"
+        required
       ></b-form-input>
       <b-form-input
         class="form"
-        v-model="rPword"
-        placeholder="pwort bestätigen"
+        v-model="rpword"
+        placeholder="Ihr Pwort bestätigen"
+        type="password"
+        required
       ></b-form-input>
-      <button type="submit">Bestätigen</button>
+      <button type="submit">Anmelden</button>
     </form>
   </div>
 </template>
@@ -34,11 +39,14 @@ export default {
         score:0,
         scores:[]      
         },
-      rPword: "",
+      rpword: "",
       notif : false
     };
   },
   methods: {
+    check : function(){
+      this.user.pword == this.rpword ? this.register() : alert('')
+    },
     register: function() {
       let info = this.user;
         this.$store.dispatch("signup", info)
