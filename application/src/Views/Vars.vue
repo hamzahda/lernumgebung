@@ -1,7 +1,7 @@
 <template>
   <div class="topic">
     <div class="content">
-      <h1>Variables and Data types</h1>
+    <h1>Variablen und Datentypen</h1>
       <div class="text">
         <br />
         <h2>Was ist Variablen und warum nutzen wie sie ?</h2>
