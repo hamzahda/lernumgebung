@@ -1,2 +1,4 @@
-  vars= 0.1
-print(vars)
+count=0
+while (count < 8):
+    print('Hallo')
+    count = count +1
