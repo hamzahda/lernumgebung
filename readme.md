@@ -51,7 +51,7 @@ Database setup
 
 #### DB Config when Working with npm
 
-The Config file is in the database provider under server\src\database\database.providers.ts
+The Config file is in the mudule provider under server\src\app.module.ts and ormconfig
 
 ```javascript
 {
@@ -59,7 +59,7 @@ The Config file is in the database provider under server\src\database\database.p
       host: 'localhost',
       port: 3306,
       username: 'root',
-      password: 'roto',
+      password: 'root',
       database: 'nestdb', // be sure to have this db in your db
       entities: [
           'dist/**/*.entity{.ts,.js}',

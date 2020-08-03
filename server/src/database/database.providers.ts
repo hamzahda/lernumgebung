@@ -5,6 +5,7 @@ export const databaseProviders = [
   {
     provide: 'DATABASE_CONNECTION',
     useFactory: async () => await createConnection({
+      name: 'docker',
       type: 'mysql',
       host: 'mysql_db',
       port: 3306,
