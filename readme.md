@@ -49,6 +49,24 @@ Database setup
 <li>pword: user</li>
 </ul>
 
+#### DB Config when Working with npm
+
+The Config file is in the database provider under server\src\database\database.providers.ts
+
+```javascript
+{
+      type: 'mysql',
+      host: 'localhost',
+      port: 3306,
+      username: 'root',
+      password: 'roto',
+      database: 'nestdb', // be sure to have this db in your db
+      entities: [
+          'dist/**/*.entity{.ts,.js}',
+      ],
+      synchronize: true,
+    }
+```
 
 In this setup you'll need to open two <br>
 Download or clone the project then 
@@ -94,6 +112,26 @@ $ npm run build
 <div> front app is running on localhost:8080 </div>
 <div> server is running on localhost:3000 </div>
 
+#### DB Config when Working with docker
+
+The Config file is in the database provider under server\src\database\database.providers.ts
+
+```javascript
+{
+      type: 'mysql',
+      host: 'mysql_db',
+      port: 3306,
+      username: 'user',
+      password: 'user',
+      database: 'lerndb',
+      entities: [
+          'dist/**/*.entity{.ts,.js}',
+      ],
+      synchronize: true,
+    }
+```
+
+#### Run Docker
 ```shell
 cd /lernumgebung
 docker-comppose up
